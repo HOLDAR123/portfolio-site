@@ -1,0 +1,17 @@
+.codeSnippet {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 16px;
+  border-radius: 16px;
+  background: #011221;
+  min-height: 182px;
+  opacity: 0.5;
+  width: 100%;
+  border: 1px solid #1E2D3D;
+  transition:opacity 200ms linear;
+
+  &:hover {
+    opacity: 1;
+  }
+}
