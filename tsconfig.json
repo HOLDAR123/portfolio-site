@@ -25,7 +25,10 @@
       "vite/client",
       "node",
       "vue"
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["src/**/*.vue"]

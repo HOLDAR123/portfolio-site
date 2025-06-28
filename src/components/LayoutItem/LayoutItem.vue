@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import s from './LayoutItem.module.scss'
-import type { HeaderDataItemType } from "@/types/header.type.ts";
+import type { HeaderDataItemType } from "@/types/header.type";
 import { useRoute } from "vue-router";
 import { computed } from "vue";
 
