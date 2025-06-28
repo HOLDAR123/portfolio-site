@@ -1,9 +1,11 @@
-export default interface HeaderDataItemType {
+import type { DefineComponent } from 'vue'
+
+export interface HeaderDataItemType {
   id: number;
   name: string;
   link?: string;
   isStatic?: boolean;
   isLast?: boolean;
-  icon?: any;
+  icon?: DefineComponent<{}, {}, any>;
   isIndicator?: boolean
 }

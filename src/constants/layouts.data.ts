@@ -1,4 +1,4 @@
-import type HeaderDataItemType from "@/types/header.type.ts";
+import type { HeaderDataItemType } from "@/types/header.type.ts";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
 
 export const leftHeaderData: HeaderDataItemType[] = [

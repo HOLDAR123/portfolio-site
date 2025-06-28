@@ -25,7 +25,8 @@
       "vite/client",
       "node",
       "vue"
-    ],
-    "include": ["src"]
-  }
+    ]
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.vue"]
 }

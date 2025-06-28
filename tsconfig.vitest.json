@@ -7,6 +7,8 @@
     "composite": true,
     "emitDeclarationOnly": true,
     "noEmit": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "lib": [],
     "types": ["node", "jsdom"]
   }
