@@ -2,10 +2,15 @@
   width: fit-content;
   padding: 16px 32px;
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
   position: relative;
   border-right: 1px solid var(--theme-stroke);
+
+  &_icon {
+    padding: 16px;
+  }
 
   &_static {
     padding-right: 128px;
@@ -18,11 +23,15 @@
   }
 
   &_text {
+    width: fit-content;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 600;
     color: var(--theme-foreground);
     transition: color 0.3s linear;
+    &:hover {
+      color: var(--theme-heading-foreground);
+    }
+
     &_active {
       color: var(--theme-heading-foreground);
     }

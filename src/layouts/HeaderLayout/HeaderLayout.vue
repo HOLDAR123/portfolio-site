@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import s from './HeaderLayout.module.scss';
-import {leftHeaderData, rightHeaderData} from "@/constants/header.data.ts";
+import {leftHeaderData, rightHeaderData} from "@/constants/layouts.data.ts";
 import LayoutItem from "@/components/LayoutItem/LayoutItem.vue";
 </script>
 
@@ -11,6 +11,7 @@ import LayoutItem from "@/components/LayoutItem/LayoutItem.vue";
         v-for="item in leftHeaderData"
         :id="item.id"
         :name="item.name"
+        :is-indicator="item.isIndicator"
         :is-static="item.isStatic"
         :link="item.link"
       />
@@ -20,6 +21,7 @@ import LayoutItem from "@/components/LayoutItem/LayoutItem.vue";
         v-for="(item, index) in rightHeaderData"
         :id="item.id"
         :name="item.name"
+        :is-indicator="item.isIndicator"
         :is-static="item.isStatic"
         :link="item.link"
         :is-last="index === rightHeaderData.length - 1 "

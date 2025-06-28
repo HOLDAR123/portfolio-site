@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import PhoneIcon from "@/assets/icons/PhoneIcon.vue";
-import HeaderLayout from "@/layouts/HeaderLayout/HeaderLayout.vue";
+import MainLayout from "@/layouts/MainLayout/MainLayout.vue";
+import CodeSnippet from "@/components/CodeSnippet/CodeSnippet.vue";
 </script>
 
 <template>
-  <header>
-    <HeaderLayout/>
-    <PhoneIcon />
-  </header>
+  <MainLayout>
+    <CodeSnippet code='
+<script setup lang="ts">
+import MainLayout from "@/layouts/MainLayout/MainLayout.vue";
+import CodeSnippet from "@/components/CodeSnippet/CodeSnippet.vue";
+</script>
+'/>
+  </MainLayout>
 </template>
