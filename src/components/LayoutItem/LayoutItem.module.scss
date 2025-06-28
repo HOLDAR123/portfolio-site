@@ -1,0 +1,55 @@
+.layoutItem {
+  width: fit-content;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-right: 1px solid var(--theme-stroke);
+
+  &_static {
+    padding-right: 128px;
+    justify-content: start;
+  }
+
+  &_last {
+    border-right: 0 !important;
+    border-left: 1px solid var(--theme-stroke);
+  }
+
+  &_text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--theme-foreground);
+    transition: color 0.3s linear;
+    &_active {
+      color: var(--theme-heading-foreground);
+    }
+  }
+
+  &_indicator {
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background: var(--primitive-orange-300);
+  }
+}
+
+.fadeEnter,
+.fadeLeave {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.enterFrom,
+.leaveTo {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.enterTo,
+.leaveFrom {
+  opacity: 1;
+  transform: scaleX(1);
+}

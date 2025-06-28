@@ -10,10 +10,10 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Code', sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: var(--color-background);
+  background-color: var(--primitive-slate-900);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -53,6 +53,10 @@ h5{
 h6{
   font-size: 20px;
   line-height: 150%;
+}
+
+ul{
+  list-style: none;
 }
 
 

@@ -1,5 +1,16 @@
 .container {
-  background: #00BBA7;
-  width: 200px;
-  height: 200px
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--primitive-slate-950);
+  &__left , &__right {
+    width: fit-content;
+    display: flex;
+    &_list {
+      width: 100%;
+      display: flex;
+    }
+  }
 }
