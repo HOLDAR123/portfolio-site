@@ -8,7 +8,7 @@
     <div :class="s.layout">
       <HeaderLayout/>
       <div :class="s.layout_content">
-        <slot/>
+        <router-view />
       </div>
       <FooterLayout/>
     </div>
