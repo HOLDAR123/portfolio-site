@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import s from './LayoutItem.module.scss'
-import HeaderDataItemType from "@/types/header.type.ts";
+import type  HeaderDataItemType from "@/types/header.type.ts";
 import { useRoute } from "vue-router";
 import { computed } from "vue";
 
@@ -16,8 +16,10 @@ const shouldShowIndicator = computed(() =>
 )
 
 const isExternalLink = computed(() =>
-  /^https?:\/\//.test(props.link)
+  /^https?:\/\//.test(props.link ?? '')
 )
+
+
 </script>
 
 <template>
