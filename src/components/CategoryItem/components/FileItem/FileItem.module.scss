@@ -1,0 +1,20 @@
+.fileItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  
+  &:hover {
+    background: rgba(248, 250, 252, 0.1);
+    color: #f8fafc;
+  }
+  
+  span {
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+}

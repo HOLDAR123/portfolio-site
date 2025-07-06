@@ -1,0 +1,50 @@
+.folderItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: start;
+  &_header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+    padding: 4px 12px;
+
+    &_arrow {
+      transition: all 0.2s linear;
+      &_active {
+        transform: rotate(90deg);
+      }
+    }
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      &_title {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: normal;
+        transition: all 0.2s linear;
+        &_active  {
+          color: var(--theme-heading-foreground);
+        }
+      }
+    }
+  }
+  &_content {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom 0.4s;
+    padding: 0 28px;
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

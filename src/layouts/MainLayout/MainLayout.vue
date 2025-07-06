@@ -8,8 +8,27 @@
     <div :class="s.layout">
       <HeaderLayout/>
       <div :class="s.layout_content">
-        <router-view />
+        <RouterView class="router-view" v-slot="{ Component }">
+          <Transition name="page-slide" mode="out-in">
+            <component :is="Component"/>
+          </Transition>
+        </RouterView>
       </div>
       <FooterLayout/>
     </div>
 </template>
+
+<style scoped>
+.page-slide-leave-active,
+.page-slide-enter-active {
+  transition: 0.3s ease all;
+}
+
+.page-slide-enter-from,
+.page-slide-leave-to {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+
+</style>
