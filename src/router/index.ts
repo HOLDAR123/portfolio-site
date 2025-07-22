@@ -17,10 +17,6 @@ const routes  = [
     path:'/projects',
     component: ProjectsPage
   },
-  {
-    path:'/contact',
-    component: ContactMePage
-  }
 ]
 
 const router = createRouter({

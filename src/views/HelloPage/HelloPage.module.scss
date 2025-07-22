@@ -3,6 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 146px;
   position: relative;
+
+  @media (max-width: 940px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .leftPart {
@@ -11,6 +15,7 @@
   align-items: start;
   justify-content: center;
   gap: 75px;
+  z-index: 999;
 
   &_info {
     display: flex;
@@ -18,20 +23,26 @@
     justify-content: start;
     align-items: start;
     gap: 8px;
+    z-index: 999;
 
     span:nth-child(1) {
-      font-size: 18px;
+      font-size: clamp(14px, 2vw, 18px);
       line-height: 27px;
     }
 
     span:nth-child(2) {
-      font-size: 60px;
+      font-size: clamp(40px, 6vw, 60px);
       line-height: 66px;
+      width: 100px;
       color: var(--theme-heading-foreground);
+
+      @media(max-width: 1040px) {
+        line-height: 56px;
+      }
     }
 
     span:nth-child(3) {
-      font-size: 30px;
+      font-size: clamp(20px, 4vw, 30px);
       line-height: 42px;
       color: var(--primitive-indigo-500);
     }
@@ -41,8 +52,9 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    z-index: 999;
     span:nth-child(1) {
-      font-size: 16px;
+      font-size: clamp(10px, 2vw, 16px);
       line-height: 24px;
     }
     span:nth-child(2) {
@@ -58,8 +70,9 @@
       span:nth-child(3) {
         color:var(--theme-heading-foreground);
       }
-      span:nth-child(4) {
+      a {
         color:var(--primitive-rose-300);
+        font-size: clamp(10px, 2vw, 16px);
         text-decoration:underline ;
       }
     }
@@ -74,6 +87,10 @@
   height: 100%;
   z-index: 2;
   gap: 16px;
+
+  @media (max-width: 940px) {
+    display: none;
+  }
 }
 
 .green {
@@ -87,6 +104,18 @@
   height: 400px;
   z-index: 1;
   background:var(--primitive-teal-400) ;
+
+  @media(max-width: 1040px) {
+    right: 500px;
+  }
+
+  @media(max-width: 787px) {
+    right: 300px;
+  }
+
+  @media(max-width: 484px) {
+    right: 100px;
+  }
 }
 
 .purple {
@@ -100,4 +129,10 @@
   height: 400px;
   z-index: 1;
   background:var(--primitive-indigo-500) ;
+  @media(max-width: 1040px) {
+    right:100px;
+  }
+  @media(max-width: 484px) {
+    right: 50px;
+  }
 }

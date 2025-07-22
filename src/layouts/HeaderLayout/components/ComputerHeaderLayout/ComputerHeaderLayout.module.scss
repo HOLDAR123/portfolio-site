@@ -5,7 +5,7 @@
   justify-content:space-between;
   align-items: center;
   border-bottom: 1px solid var(--primitive-slate-950);
-  &__left , &__right {
+  &__left  {
     width: fit-content;
     display: flex;
     height: 56px;

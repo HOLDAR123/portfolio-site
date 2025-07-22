@@ -18,8 +18,8 @@ const filteredProjects = computed(() => {
   if (selectedFilters.value.length === 0) {
     return projectsData
   }
-  
-  return projectsData.filter(project => 
+
+  return projectsData.filter(project =>
     project.technologies.some(tech => selectedFilters.value.includes(tech))
   )
 })
@@ -34,15 +34,31 @@ const filteredProjects = computed(() => {
    </SideBarLayout>
 
     <div :class="s.projectsPage_content">
-      <Transition name="content">
-        <div :class="s.projectsGrid">
-          <ProjectItem 
-            v-for="project in filteredProjects" 
+        <TransitionGroup name="projects" tag="div" :class="s.projectsGrid">
+          <ProjectItem
+            v-for="project in filteredProjects"
             :key="project.id"
             :project="project"
           />
-        </div>
-      </Transition>
+        </TransitionGroup>
     </div>
   </div>
 </template>
+
+<style scoped>
+.projects-enter-active,
+.projects-leave-active {
+  transition: all 0.3s ease;
+}
+
+.projects-enter-from {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
+}
+
+.projects-leave-to {
+  opacity: 0;
+  transform: scale(0.95) translateY(-10px);
+}
+
+</style>

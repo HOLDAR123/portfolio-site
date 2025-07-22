@@ -21,8 +21,8 @@ function handleFileClick(fileName: string) {
   emit('fileClick', fileName)
 }
 
-// Автоматически открываем категорию personal-info
-if (props.categoryTitle === 'personal-info') {
+
+if (props.categoryTitle === 'personal-info' || props.categoryTitle === "projects") {
   isOpen.value = true
 }
 </script>

@@ -4,7 +4,12 @@
   background: #1e293b;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+
+  @media(max-width: 920px) {
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: calc(100vh - 300px);
+  }
 }
 
 .header {
@@ -20,6 +25,10 @@
   display: flex;
   gap: 0;
   height: 100%;
+  @media(max-width: 747px) {
+    width: 747px;
+    overflow-x: auto;
+  }
 }
 
 .tab {
@@ -116,6 +125,7 @@
   flex: 1;
   padding: 16px;
   overflow-y: auto;
+  overflow-x: auto;
   background: #1e293b;
 }
 

@@ -3,11 +3,8 @@
   height: 100%;
   display: grid;
   grid-template-columns: 242px 100%;
-}
 
-.editorSection {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  width: 88%;
+  @media(max-width: 920px){
+    grid-template-columns: 1fr;
+  }
 }

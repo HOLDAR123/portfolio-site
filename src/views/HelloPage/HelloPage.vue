@@ -20,7 +20,7 @@ const snippets = Array.from({ length: 4 }, (_, i) => `console.log('Snippet ${i +
           <span>const</span>
           <span>githubLink</span>
           <span>=</span>
-          <span>"https://github.com/HOLDAR123"</span>
+          <a href="https://github.com/HOLDAR123" target="_blank">"https://github.com/HOLDAR123"</a>
         </span>
       </div>
     </div>

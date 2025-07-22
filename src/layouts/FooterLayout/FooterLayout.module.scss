@@ -4,6 +4,7 @@
   display: flex;
   position: fixed;
   bottom: 0;
+  z-index: 999;
   background-color: var(--primitive-slate-900);
   justify-content:space-between;
   align-items: center;
@@ -12,5 +13,11 @@
     width: fit-content;
     height: 56px;
     display: flex;
+  }
+
+  &__right {
+    @media (max-width: 565px) {
+      display: none;
+    }
   }
 }

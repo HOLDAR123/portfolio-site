@@ -65,23 +65,25 @@ const isActiveTab = (fileId: string) => {
 <template>
   <div :class="s.editor">
     <div :class="s.header">
-      <div :class="s.tabs">
-        <div
-          v-for="file in openFiles"
-          :key="file.id"
-          :class="[s.tab, { [s.tabActive]: isActiveTab(file.id) }]"
-          @click="switchToFile(file.id)"
-        >
-          <span :class="s.tabIcon">{{ getFileIcon(file.fileName) }}</span>
-          <span :class="s.tabTitle">{{ file.fileName }}</span>
-          <button
-            :class="s.tabCloseButton"
-            @click="closeFile(file.id, $event)"
+        <div :class="s.tabs">
+          <TransitionGroup name="tabs">
+          <div
+            v-for="file in openFiles"
+            :key="file.id"
+            :class="[s.tab, { [s.tabActive]: isActiveTab(file.id) }]"
+            @click="switchToFile(file.id)"
           >
-            <CloseIcon :width="12" :height="12" color="#62748E" />
-          </button>
+            <span :class="s.tabIcon">{{ getFileIcon(file.fileName) }}</span>
+            <span :class="s.tabTitle">{{ file.fileName }}</span>
+            <button
+              :class="s.tabCloseButton"
+              @click="closeFile(file.id, $event)"
+            >
+              <CloseIcon :width="12" :height="12" color="#62748E" />
+            </button>
+          </div>
+          </TransitionGroup>
         </div>
-      </div>
     </div>
 
     <div v-if="activeFile" :class="s.content">
@@ -106,3 +108,17 @@ const isActiveTab = (fileId: string) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.tabs-leave-active,
+.tabs-enter-active {
+  transition: 0.3s ease all;
+
+}
+
+.tabs-enter-from,
+.tabs-leave-to {
+  opacity: 0;
+  transform: scale(0.5);
+}
+</style>

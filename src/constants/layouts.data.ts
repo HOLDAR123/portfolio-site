@@ -31,15 +31,30 @@ export const leftHeaderData: HeaderDataItemType[] = [
   },
 ]
 
-export const rightHeaderData: HeaderDataItemType[] = [
+export const HeaderMobileData: HeaderDataItemType[] = [
   {
     id: 1,
-    name: '_contact-me',
-    link: '/contact',
-    isStatic: false,
-    isIndicator: true,
+    name: '# navigate:',
+    link: '/'
+  },
+  {
+    id: 2,
+    name: '_hello',
+    link: '/',
+  },
+  {
+    id: 3,
+    name: '_about-me',
+    link: '/about',
+  },
+  {
+    id: 4,
+    name: '_projects',
+    link: '/projects',
   },
 ]
+
+
 
 
 export const leftFooterData = [
